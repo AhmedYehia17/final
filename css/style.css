@@ -5,8 +5,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
-
+/*HEADER START*/
 .header {
     display: flex;
     justify-content: space-between;
@@ -56,10 +57,68 @@
     display: none;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .header {
         padding: 15px 120px;
         border-bottom: 1px solid #000;
+    }
+    .header .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    .header .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background-color: #11101b;
+        margin-bottom: 3px;
+        border-radius: 15px
+    }
+    .header nav {
+        position: absolute;
+        top: 76px;
+        width: calc(100% - 240px);
+        height: 0;
+        background-color: #11101b;
+        color: #fefefe;
+        transition: 0.5s;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        z-index: 10;
+    }
+    .header nav.active {
+        height: 250px;
+    }
+    .header nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0;
+        opacity: 0;
+        transition: 0.5s;
+    }
+    .header nav ul.active {
+        opacity: 1;
+    }
+    
+    .header nav ul li a {
+        color: #fefefe;
+        margin-bottom: 15px;
+        font-size: 22px;
+    }
+    .header nav li a::after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        width: 0;
+        background-color: #fefefe;
+        transition: 0.5s;
+    }
+    .header nav li a:hover::after {
+        width: 100%;
     }
 }
 
@@ -83,17 +142,14 @@
         padding: 15px 50px;
         border-bottom: 1px solid #000;
     }
-
     .header nav ul li {
         margin: 0 10px;
     }
-
     .header .hamburger {
         display: flex;
         flex-direction: column;
         cursor: pointer;
     }
-
     .header .hamburger .line {
         width: 30px;
         height: 3px;
@@ -101,7 +157,6 @@
         margin-bottom: 3px;
         border-radius: 15px
     }
-
     .header nav {
         position: absolute;
         top: 76px;
@@ -114,11 +169,9 @@
         border-bottom-right-radius: 15px;
         z-index: 10;
     }
-
     .header nav.active {
-        height: 200px;
+        height: 250px;
     }
-
     .header nav ul {
         display: flex;
         flex-direction: column;
@@ -128,16 +181,13 @@
         opacity: 0;
         transition: 0.5s;
     }
-
     .header nav ul.active {
         opacity: 1;
     }
-
     .header nav ul li a {
         color: #fefefe;
         margin-bottom: 15px;
     }
-
     .header nav li a::after {
         position: absolute;
         content: '';
@@ -148,7 +198,6 @@
         background-color: #fefefe;
         transition: 0.5s;
     }
-
     .header nav li a:hover::after {
         width: 100%;
     }
@@ -172,8 +221,9 @@
         width: 20px;
     }
 }
-
+/*HEADER END*/
 /*///////////////////////////////////////////*/
+/*HERO START*/
 .hero {
     min-height: calc(100vh - 150px);
     background-color: #C4DFDF;
@@ -266,15 +316,9 @@
     .hero .social-media a {
         font-size: 30px;
     }
-
-    .hero .hero-text {}
-
     .hero .hero-text h1 {
         font-size: 150px;
     }
-
-    .hero .hero-description {}
-
     .hero .hero-description img {
         height: 100%;
         width: 12%;
@@ -284,7 +328,6 @@
         font-size: 25px;
     }
 }
-
 @media (max-width: 768px) {
     .hero {
         padding: 40px 60px;
@@ -308,7 +351,6 @@
         font-size: 10px;
     }
 }
-
 @media (max-width: 567px) {
     .hero {
         padding: 30px 25px;
@@ -339,3 +381,320 @@
         font-size: 6px;
     }
 }
+/*HERO END*/
+/*//////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////*/
+/*ABOUT START*/
+.about{
+    width: 100%;
+    height: 100vh;
+    background-color: #C4DFDF;
+    padding: 50px 25px 30px;
+    padding-left: 70px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+.about-header{
+    margin: 0 auto;
+    width: fit-content;
+}
+.about-header h2{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fefefe;
+    position: relative;
+    cursor: pointer;
+}
+.about-header h2::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 65%;
+    height: 3px;
+    background-color: #fefefe;
+    transition: 0.6s;
+}
+.about-header h2:hover::after{
+    width: 100%;
+}
+.about .about-container{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 80%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-container .about-img{
+    width: 300px;
+    height: 300px;
+    background-color: #fefefe;
+    position: relative;
+}
+.about-container .about-img img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -25px;
+    right: -45px;
+    border: 5px solid #C4DFDF
+}
+.about-container .about-text{
+    width: 60%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.about-container .about-text h3{
+    font-size: 40px;
+    font-weight: 600;
+    color: #11101b
+}
+.about-container .about-text p{
+    color: #11101b
+}
+@media (min-width: 769px) and (max-width: 1024px){
+    .about{
+        padding: 80px 25px 30px;
+    }
+    .about-header h2{
+        font-size: 50px;
+        font-weight: 600;
+        color: #fefefe;
+        position: relative;
+        cursor: pointer;
+    }
+    .about-header h2::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 65%;
+        height: 3px;
+        background-color: #fefefe;
+        transition: 0.6s;
+    }
+    .about-header h2:hover::after{
+        width: 100%;
+    }
+    .about .about-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 90%;
+    }
+    .about-container .about-img{
+        width: 220px;
+        height: 220px;
+        background-color: #fefefe;
+        position: relative;
+    }
+    .about-container .about-img img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -10px;
+    right: -20px;
+    border: 5px solid #C4DFDF
+}
+.about-container .about-text{
+    height: 60%;
+    width: 90%;
+    padding: 20px;
+}
+.about-container .about-text h3{
+    font-size: 35px;
+    font-weight: 600;
+    color: #11101b
+}
+}
+@media (min-width: 1440px){
+    .about .about-container{
+        justify-content: center;
+    }
+    .about .about-text{
+        padding: 0 50px;
+    }
+}
+@media (min-width: 2560px){
+    .about-header h2{
+        font-size: 80px;
+        font-weight: 600;
+        color: #fefefe;
+        position: relative;
+        cursor: pointer;
+    }
+    .about-header h2::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 65%;
+        height: 3px;
+        background-color: #fefefe;
+        transition: 0.6s;
+    }
+    .about-header h2:hover::after{
+        width: 100%;
+    }
+    .about .about-container{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        width: 80%;
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-container .about-img{
+        width: 400px;
+        height: 400px;
+        background-color: #fefefe;
+        position: relative;
+    }
+    .about-container .about-text{
+        padding: 0 30px;
+        height: 60%;
+    }
+    .about-container .about-text h3{
+        font-size: 55px;
+        font-weight: 600;
+        color: #11101b
+    }
+    .about-container .about-text p{
+        color: #11101b
+    }
+}
+@media (min-width: 568px) and (max-width: 768px){
+    .about{
+        padding: 60px 25px 30px;
+    }
+    .about-header h2{
+        font-size: 50px;
+        font-weight: 600;
+        color: #fefefe;
+        position: relative;
+        cursor: pointer;
+    }
+    .about-header h2::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 65%;
+        height: 3px;
+        background-color: #fefefe;
+        transition: 0.6s;
+    }
+    .about-header h2:hover::after{
+        width: 100%;
+    }
+    .about .about-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 90%;
+    }
+    .about-container .about-img{
+        width: 250px;
+        height: 250px;
+        background-color: #fefefe;
+        position: relative;
+    }
+    .about-container .about-img img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -10px;
+    right: -20px;
+    border: 5px solid #C4DFDF
+}
+.about-container .about-text{
+    height: 65%;
+    width: 90%;
+    padding: 15px 0;
+}
+.about-container .about-text h3{
+    font-size: 35px;
+    font-weight: 600;
+    color: #11101b
+}
+}
+@media (max-width: 567px){
+    .about{
+        padding: 30px 25px 30px;
+        padding-left: 30px;
+    }
+    .about-header h2{
+        font-size: 40px;
+        font-weight: 600;
+        color: #fefefe;
+        position: relative;
+        cursor: pointer;
+    }
+    .about-header h2::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 65%;
+        height: 3px;
+        background-color: #fefefe;
+        transition: 0.6s;
+    }
+    .about-header h2:hover::after{
+        width: 100%;
+    }
+    .about .about-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 90%;
+        border: 1px solid red;
+
+    }
+    .about-container .about-img{
+        width: 150px;
+        height: 150px;
+        background-color: #fefefe;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .about-container .about-img img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -10px;
+    right: -20px;
+    border: 5px solid #C4DFDF
+}
+.about-container .about-text{
+    width: 80%;
+    height: 70%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+.about-container .about-text h3{
+    font-size: 25px;
+    font-weight: 600;
+    color: #11101b
+}
+.about-container .about-text p{
+    color: #11101b
+}
+}
+/*ABOUT END*/
