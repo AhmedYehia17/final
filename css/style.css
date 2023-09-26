@@ -384,7 +384,7 @@
 
     .hero .hero-text h1 {
         color: #11101b;
-        font-size: 60px;
+        font-size: 80px;
         font-weight: 800;
         letter-spacing: 3px;
     }
@@ -394,7 +394,7 @@
     }
 
     .hero-text .hero-description p {
-        font-size: 13px;
+        font-size: 17px;
     }
 }
 
@@ -597,7 +597,7 @@
 
     .about-container .about-text {
         width: 95%;
-        height: 70%;
+        height: 40%;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -681,7 +681,7 @@
 
     .about-container .about-text {
         width: 95%;
-        height: 70%;
+        height: 35%;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -698,6 +698,7 @@
     .about-container .about-text p {
         color: #11101b;
         font-size: 14px;
+        text-align: justify;
     }
 }
 
@@ -739,17 +740,17 @@
 
     .about .about-container {
         width: 90%;
-        height: 75%;
+        height: 70%;
         display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
         padding-top: 25px;
     }
 
     .about-container .about-img {
-        width: 250px;
-        height: 250px;
+        width: 300px;
+        height: 300px;
         background-color: #fefefe;
         position: relative;
     }
@@ -765,24 +766,25 @@
 
     .about-container .about-text {
         width: 65%;
-        height: 85%;
+        height: 40%;
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 0 20px;
+        margin-top: 3%;
     }
 
     .about-container .about-text h3 {
-        font-size: 40px;
+        font-size: 50px;
         font-weight: 600;
         color: #11101b
     }
 
     .about-container .about-text p {
         color: #11101b;
-        font-size: 17px;
+        font-size: 20px;
         text-align: justify;
     }
 }
@@ -826,14 +828,14 @@
         width: 90%;
         height: 75%;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         /* padding-top: 35px; */
     }
 
     .about-container .about-img {
-        width: 260px;
-        height: 260px;
+        width: 280px;
+        height: 280px;
         background-color: #fefefe;
         position: relative;
     }
@@ -855,18 +857,18 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 0 20px;
+        padding: 0 3%;
     }
 
     .about-container .about-text h3 {
-        font-size: 45px;
+        font-size: 50px;
         font-weight: 600;
         color: #11101b
     }
 
     .about-container .about-text p {
         color: #11101b;
-        font-size: 17px;
+        font-size: 18px;
         text-align: justify;
     }
 }
@@ -904,7 +906,7 @@
     }
 
     .about .about-container {
-        width: 75%;
+        width: 80%;
         height: 75%;
         display: flex;
         justify-content: center;
@@ -936,6 +938,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding: 0 3%;
     }
 
     .about-container .about-text h3 {
@@ -1058,15 +1061,15 @@
     }
 
     .contact-container h2 {
-        font-size: 90px;
+        font-size: 120px;
     }
 
     .contact-container a {
-        font-size: 30px;
+        font-size: 50px;
     }
 
     .contact p {
-        font-size: 12px;
+        font-size: 15px;
     }
 }
 
